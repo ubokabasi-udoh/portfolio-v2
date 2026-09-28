@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-//import { ThemeToggle } from './theme-toggle';
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -25,6 +25,9 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const pathname = usePathname();
+  console.log("Current pathname:", pathname); // Log the current pathname
+
   return (
     <>
       {/* Desktop Navigation */}
@@ -38,29 +41,28 @@ export function Navigation() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <Link
-            href="/"
-            className="text-xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 transition-all duration-500 hover:scale-105 dark:from-blue-300 dark:to-blue-500 dark:hover:from-blue-400 dark:hover:to-blue-600"
-          >
-            {"Basi"}
-          </Link>
-          {/* <RobotBuddy /> */}
-
+        <div className="container mx-auto px-6 py-4 flex justify-center items-center">
           <div className="flex items-center gap-8">
             <ul className="flex gap-6">
-              {navItems.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm font-medium dark:text-gray-300 text-gray-600 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
+              {navItems.map((item) => {
+                const active = pathname === item.href;
+
+                return (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className={`text-sm font-medium transition-colors underline-offset-4 hover:underline ${
+                        active
+                          ? "text-blue-500 dark:text-blue-400"
+                          : "dark:text-gray-300 text-gray-600 hover:text-blue-500 dark:hover:text-blue-400"
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
-            {/* <ThemeToggle /> */}
           </div>
         </div>
       </motion.nav>

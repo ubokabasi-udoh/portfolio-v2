@@ -21,5 +21,9 @@
     // Enable image optimization
     // see https://opennext.js.org/cloudflare/howtos/image
     "binding": "IMAGES"
-  }
+  },
+  "routes": [
+    { "pattern": "ubokabasiudoh.com", "custom_domain": true },
+    { "pattern": "www.ubokabasiudoh.com", "custom_domain": true }
+  ]
 }
