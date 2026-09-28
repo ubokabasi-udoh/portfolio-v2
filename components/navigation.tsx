@@ -26,7 +26,6 @@ export function Navigation() {
   }, []);
 
   const pathname = usePathname();
-  console.log("Current pathname:", pathname); // Log the current pathname
 
   return (
     <>
@@ -51,10 +50,10 @@ export function Navigation() {
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className={`text-sm font-medium transition-colors underline-offset-4 hover:underline ${
+                      className={`text-sm font-medium hover:font-semibold transition-all duration-300 underline-offset-4 ${
                         active
                           ? "text-blue-500 dark:text-blue-400"
-                          : "dark:text-gray-300 text-gray-600 hover:text-blue-500 dark:hover:text-blue-400"
+                          : "dark:text-gray-300 text-gray-600 hover:underline"
                       }`}
                     >
                       {item.name}
@@ -116,7 +115,7 @@ export function Navigation() {
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className="block px-4 py-2 text-lg font-medium dark:text-gray-300 text-gray-600 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                      className="block px-4 py-2 text-lg font-medium dark:text-gray-300 text-gray-600 hover:text-blue-500 dark:hover:text-blue-400 transition-all duration-300"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
