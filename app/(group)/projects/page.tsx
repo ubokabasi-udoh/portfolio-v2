@@ -71,35 +71,11 @@ const allProjects = [
     description:
       "Smart translation and summarization tool built using React and Chrome AI APIs.",
     tags: ["React", "Chrome APIs"],
-    link: "https://basii199.github.io/ai-translator/",
+    link: "https://ubokabasi-udoh.github.io/ai-translator/",
     images: [
       "https://res.cloudinary.com/dj5wh1pcv/image/upload/v1746106667/ai-translate-home_mtves5.png",
     ],
   },
-  // {
-  //   title: "Weather App",
-  //   description: "Minimalist real-time weather application developed with React and Weather API.",
-  //   tags: ["React", "Weather API"],
-  //   link: "https://basii199.github.io/Weather-app/",
-  //   images: [
-  //     "https://res.cloudinary.com/dj5wh1pcv/image/upload/v1746106667/weather-app2_bu2rab.png",
-  //     "https://res.cloudinary.com/dj5wh1pcv/image/upload/v1746106667/weather-app1_yaandb.png"
-  //   ],
-  // },
-  // {
-  //   title: "AIO-Gle",
-  //   description: "AI-powered search engine and information summarizer built with Next.js, Redux, and TypeScript.",
-  //   tags: ["Next.js", "Redux", "TypeScript"],
-  //   link: "#",
-  //   images: ["https://res.cloudinary.com/dj5wh1pcv/image/upload/sample.jpg"],
-  // },
-  // {
-  //   title: "Cash Hub",
-  //   description: "AI-driven savings and budgeting platform built with Next.js, TypeScript, and Redux.",
-  //   tags: ["Next.js", "TypeScript", "Redux"],
-  //   link: "#",
-  //   images: ["https://res.cloudinary.com/dj5wh1pcv/image/upload/sample.jpg"],
-  // }
 ];
 
 export default function ProjectsPage() {

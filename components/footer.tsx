@@ -115,7 +115,7 @@ export function Footer() {
             </h3>
             <div className="flex gap-4">
               <a
-                href="https://github.com/basii199"
+                href="https://github.com/ubokabasi-udoh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"

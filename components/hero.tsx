@@ -9,7 +9,7 @@ import Link from "next/link";
 export function Hero() {
   const socialLinks = [
     {
-      href: "https://github.com/basii199",
+      href: "https://github.com/ubokabasi-udoh",
       label: "GitHub",
       icon: Github,
     },
