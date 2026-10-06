@@ -8,7 +8,7 @@ const experiences = [
     company: "RavenPay Limited",
     location: "Lagos, Nigeria",
     role: "Frontend Engineer (Infrastructure Team)",
-    period: "June 2024 - Present",
+    period: "June 2024 - September 2026",
     description: [
       "Architected and shipped the BankBox merchant console using React and TypeScript, powering self-serve POS fleet management, transaction reconciliation, and real-time analytics for 20,000+ businesses.",
       "Built a React + Vite boilerplate with AI agent rules that encode Raven's design system, including components, hooks, and helpers, standardizing project setup across teams and cutting Figma-to-production build time by 80%.",
